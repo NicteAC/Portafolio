@@ -1,0 +1,12 @@
+// src/sass/main.scss
+$body-font-family: 'Open Sans', sans-serif;
+$heading-font-family: 'Playfair Display', sans-serif;
+$border-radius-root: 0;
+$color-pack: false;
+
+@import '~vuetify/src/styles/styles.sass';
+
+.v-card,
+.v-btn {
+  @include elevation(0);
+}
