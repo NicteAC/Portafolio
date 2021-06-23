@@ -2,12 +2,8 @@
   <div class="main center">
     <div class="box center">
       <img src="./logo.png" alt="#" />
-      <div>
-        <p class="user_name"></p>
-        <p class="skill"></p>
-      </div>
       <div @click="arr" class="arr_container center">
-        <i class="fas fa-arrow-right"></i>
+        <span class="mdi mdi-arrow-bottom-right"></span>
       </div>
       <div class="left_container" :class="flip ? 'active' : 'off'">
         <p>Skills</p>
@@ -18,13 +14,11 @@
           <div>Node js</div>
         </div>
         <div class="icons">
-          <i class="fab fa-github"></i>
-          <i class="fab fa-linkedin"></i>
-          <i class="fab fa-twitter"></i>
-          <i class="fab fa-facebook"></i>
+          <span class="mdi mdi-github"></span>
+          <span class="mdi mdi-web-box"></span>
         </div>
         <div @click="clc" class="cancel center">
-          <i class="fas fa-times"></i>
+          <span class="mdi mdi-close"></span>
         </div>
       </div>
     </div>
@@ -80,9 +74,8 @@ body {
   overflow: hidden;
 }
 .box img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50px;
+  width: 250px;
+  height: 250px;
 }
 .user_name {
   margin-bottom: 5px;
