@@ -1,32 +1,26 @@
 <template>
-  <v-app-bar
-    id="core-app-bar"
-    app
-    color="white"
-    elevate-on-scroll
-    height="96"    
-  >
-    <v-container>
+  <v-app-bar id="core-app-bar" app color="white" elevate-on-scroll height="96">
+    <v-container mx-4>
       <v-row>
-        <div>
-        <v-img
-          src="../assets/03.png"
-          contain
-          class="shrink mr-2"
-          height="60"
-          width="200"
-        />
-        </div>  
+        <div class="">
+          <v-img
+            src="../assets/03.png"
+            contain
+            class="shrink mr-2"
+            height="60"
+            width="200"
+          />
+        </div>
         <v-spacer />
         <v-toolbar-items v-if="$vuetify.breakpoint.smAndUp" class="shrink">
-          <v-btn          
+          <v-btn
             v-for="(link, i) in links"
             :key="i"
             :to="{
               name: link,
             }"
             active-class="primary--text"
-            class="subtitle-1 ml-1"
+            class="subtitle-1"
             exact
             min-width="128"
             text

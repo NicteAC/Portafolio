@@ -14,10 +14,10 @@
           <h1
             class="mb-6"
             :class="$vuetify.breakpoint.md ? 'display-2' : 'display-1'"
-          >
-            Hola! Soy Carolina Aliaga.<br />
-            Desarrolladora FrontEnd, UX y Diseñadora
-          </h1>
+          >Mi historia
+            <br />
+           
+          </h1><br />
 
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
@@ -47,7 +47,7 @@ export default {
 
 <style lang="sass">
 .signature
-  font-family: 'Cedarville Cursive', cursive !important
+  font-family: 'Sacramento', cursive !important
   font-size: 2rem
   font-style: italic
 </style>

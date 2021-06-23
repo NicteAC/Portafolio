@@ -29,7 +29,7 @@
         <div class="mb-4"><strong>Email</strong> carola.aliaga@gmail.com</div>
 
         <div class="mb-4">
-          <strong>LinkedIn</strong>
+          <strong>LinkedIn</strong> https://www.linkedin.com/in/carola-aliaga/
         </div>
 
         <div class="mb-4"><strong>Móvil</strong> +56961635279</div>

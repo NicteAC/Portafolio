@@ -29,14 +29,14 @@
     data: () => ({
       date: (new Date()).getFullYear(),
       icons: [
+        'mdi-language-html5',
+        'mdi-language-css3',
+        'mdi-sass',
+        'mdi-bootstrap',
+        'mdi-language-javascript',
         'mdi-github',
         'mdi-vuejs',
         'mdi-vuetify',
-        'mdi-language-javascript',
-        'mdi-language-css3',
-        'mdi-language-html5',
-        'mdi-sass',
-        'mdi-bootstrap',
       ],
     }),
   }
