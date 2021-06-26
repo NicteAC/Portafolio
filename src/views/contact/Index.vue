@@ -5,16 +5,16 @@
     fluid
     tag="section"
   >
-    <iframe
+    <!-- <iframe
       allowfullscreen
       frameborder="0"
       height="500"
       src="https://maps.google.com/maps?width=720&amp;height=600&amp;hl=es&amp;q=%C3%B1u%C3%B1oa.%20chile+(Mi%20ciudad)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
       style="border: 0"
       width="100%"
-    />
+    /> -->
 
-    <v-row class="ma-0" justify="center">
+    <v-row class="mt-10" justify="center">
       <v-col cols="12" md="4">
         <h1 class="display-1 mb-8 font-weight-bold">
           Informacion de Contacto:
@@ -39,35 +39,27 @@
         <v-form>
           <v-row class="mb-6">
             <v-col cols="12" md="6">
-              <v-sheet>
-                <v-text-field flat hide-details label="Nombre" solo />
-              </v-sheet>
+              <v-text-field hide-details label="Nombre" solo />
             </v-col>
 
             <v-col cols="12" md="6">
-              <v-sheet>
-                <v-text-field flat hide-details label="Correo" solo />
-              </v-sheet>
+              <v-text-field hide-details label="Correo" solo />
             </v-col>
 
             <v-col cols="12">
-              <v-sheet>
-                <v-text-field flat hide-details label="Asunto" solo />
-              </v-sheet>
+              <v-text-field hide-details label="Asunto" solo />
             </v-col>
 
             <v-col cols="12">
-              <v-sheet>
-                <v-textarea flat hide-details label="Mensaje" solo />
-              </v-sheet>
+              <v-textarea hide-details label="Mensaje" solo />
             </v-col>
           </v-row>
 
           <v-btn
             :block="$vuetify.breakpoint.smAndDown"
-            class="white--text"
-            color="black"
+            class="primary--text"
             x-large
+            elevation="3"
           >
             Enviar mensaje
           </v-btn>

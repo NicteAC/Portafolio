@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar id="core-app-bar" app color="white" elevate-on-scroll height="96">
+  <v-app-bar id="core-app-bar" app color="white" elevate-on-scroll height="80">
     <v-container mx-4>
       <v-row>
         <div class="">

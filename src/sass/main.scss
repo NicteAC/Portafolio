@@ -1,11 +1,11 @@
 // src/sass/main.scss
-$body-font-family: 'Open Sans', sans-serif;
-$heading-font-family: 'Indie Flower', cursive;
+$body-font-family: 'Indie Flower', cursive;
+$heading-font-family: 'Open Sans', sans-serif;
 $border-radius-root: 0;
 $color-pack: false;
 
 @import '~vuetify/src/styles/styles.sass';
-
+@import 'colors';
 .v-card,
 .v-btn {
   @include elevation(0);

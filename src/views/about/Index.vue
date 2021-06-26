@@ -48,6 +48,6 @@ export default {
 <style lang="sass">
 .signature
   font-family: 'Sacramento', cursive !important
-  font-size: 2rem
+  font-size: 2.5rem
   font-style: italic
 </style>
