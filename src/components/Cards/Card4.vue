@@ -1,7 +1,7 @@
 <template>
   <div class="main center">
     <div class="box center">
-      <img src="./logo.png" alt="#" />
+      <img src="../../assets/images/ricomida.png" alt="#" />
       <div @click="arr" class="arr_container center">
         <span class="mdi mdi-arrow-bottom-right"></span>
       </div>
@@ -27,7 +27,7 @@
 
 <script>
 export default {
-    name: 'Cards',
+    name: 'Card4',
     data() {
         return {
             flip: false
@@ -61,10 +61,10 @@ body {
   align-items: center;
 }
 .main {
-  height: 100vh;
+  height: 50vh;
 }
 .box {
-  width: 250px;
+  width: 350px;
   height: 250px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.288);
   border-radius: 23px;
@@ -74,7 +74,7 @@ body {
   overflow: hidden;
 }
 .box img {
-  width: 250px;
+  width: 350px;
   height: 250px;
 }
 .user_name {
