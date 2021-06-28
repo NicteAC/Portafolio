@@ -1,12 +1,12 @@
 <template>
   <div class="main center">
     <div class="box center">
-      <img src="../../assets/images/meetandcoffe.png" alt="#" />
+      <img src="../../assets/images/ottoklaus.png" alt="#" />
       <div @click="arr" class="arr_container center">
         <span class="mdi mdi-arrow-bottom-right"></span>
       </div>
       <div class="left_container" :class="flip ? 'active' : 'off'">
-        <p>Hecho con:</p>
+        <p>Skills</p>
         <div class="skills">
           <div>HTML</div>
           <div>Css</div>
@@ -25,7 +25,7 @@
 
 <script>
 export default {
-    name: 'Card1',
+    name: 'Card13',
     data() {
         return {
             flip: false
