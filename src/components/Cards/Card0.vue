@@ -1,7 +1,7 @@
 <template>
   <div class="main center">
     <div class="box center">
-      <img src="../../assets/images/cafeagere.png" alt="#" />
+      <img src="../../assets/images/suricata.png" alt="#" />
       <div @click="arr" class="arr_container center">
         <span class="mdi mdi-arrow-bottom-right"></span>
       </div>
@@ -10,11 +10,10 @@
         <div class="skills">
           <div>HTML</div>
           <div>Css</div>
-          <div>Sass</div>
         </div>
-        <div class="icons">
-          <a href=""><span class="mdi mdi-github mx-1 url--text"></span></a>
-          <a href=""><span class="mdi mdi-web-box mx-1 url--text"></span></a>
+        <div class="icons mt-2">
+          <a href="https://github.com/NicteAC/Suricata"><span class="mdi mdi-github mx-1"></span></a>
+          <a href="https://nicteac.github.io/Suricata/"><span class="mdi mdi-web-box mx-1"></span></a>          
         </div>
         <div @click="clc" class="cancel center">
           <span class="mdi mdi-close"></span>
@@ -26,7 +25,7 @@
 
 <script>
 export default {
-    name: 'Card9',
+    name: 'Card0',
     data() {
         return {
             flip: false
@@ -51,12 +50,8 @@ export default {
   box-sizing: border-box;
   font-family: "Josefin Sans", sans-serif;
 }
-#icono {
-  text-decoration: none;
-  color: white;
-}
 body {
-  background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+  background:  #b920c4;
 }
 .center {
   display: flex;
@@ -85,7 +80,7 @@ body {
   font-size: 2rem;
 }
 .skill {
-  color: rgba(255, 255, 255, 0.555);
+  color: white;
 }
 /*arrow*/
 .arr_container,

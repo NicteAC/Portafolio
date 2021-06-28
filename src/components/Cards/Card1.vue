@@ -6,14 +6,14 @@
         <span class="mdi mdi-arrow-bottom-right"></span>
       </div>
       <div class="left_container" :class="flip ? 'active' : 'off'">
-        <p>Hecho con:</p>
+        <p><strong>Hecho con:</strong></p>
         <div class="skills">
-          <div>HTML</div>
+          <div>Html</div>
           <div>Css</div>
         </div>
-        <div class="icons">
-          <span class="mdi mdi-github"></span>
-          <span class="mdi mdi-web-box"></span>
+        <div class="icons mt-2">
+          <a href="https://github.com/NicteAC/Meet_Coffee"><span id="icono" class="mdi mdi-github mx-1"></span></a>
+          <a href="https://nicteac.github.io/Meet_Coffee/"><span class="mdi mdi-web-box mx-1"></span></a>          
         </div>
         <div @click="clc" class="cancel center">
           <span class="mdi mdi-close"></span>
@@ -51,7 +51,7 @@ export default {
   font-family: "Josefin Sans", sans-serif;
 }
 body {
-  background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+  background:  #b920c4;
 }
 .center {
   display: flex;
@@ -80,7 +80,7 @@ body {
   font-size: 2rem;
 }
 .skill {
-  color: rgba(255, 255, 255, 0.555);
+  color: white;
 }
 /*arrow*/
 .arr_container,
@@ -105,11 +105,11 @@ body {
 }
 .left_container {
   position: absolute;
-  background: #0f2027;
+  background: #BA68C8;
   width: 100%;
   height: 100%;
   border-radius: 23px;
-  padding: 40px 0 0 20px;
+  padding: 40px 0 0 0px;
   transition: all 0.4s;
 }
 .off {
@@ -124,8 +124,8 @@ body {
 }
 .left_container .skills div {
   display: inline-block;
-  color: rgb(155, 155, 155);
-  border: 1px solid rgb(155, 155, 155);
+  color: white;
+  border: 1px solid white;
   padding: 5px 10px;
   font-size: 0.9rem;
   margin: 4px 4px 4px 0;

@@ -6,14 +6,17 @@
         <span class="mdi mdi-arrow-bottom-right"></span>
       </div>
       <div class="left_container" :class="flip ? 'active' : 'off'">
-        <p>Skills</p>
+        <p><strong>Hecho con:</strong></p>
         <div class="skills">
           <div>HTML</div>
           <div>Css</div>
+          <div>JavaScript</div>
+          <div>Vue</div>
+          <div>Vuetify</div>
         </div>
         <div class="icons">
-          <span class="mdi mdi-github"></span>
-          <span class="mdi mdi-web-box"></span>
+          <a href=""><span id="icono" class="mdi mdi-github mx-1 url--text"></span></a>
+          <a href="https://otto-klaus-inventario.web.app/"><span class="mdi mdi-web-box mx-1 url--text"></span></a>
         </div>
         <div @click="clc" class="cancel center">
           <span class="mdi mdi-close"></span>
@@ -105,11 +108,11 @@ body {
 }
 .left_container {
   position: absolute;
-  background: #0f2027;
+  background: #BA68C8;
   width: 100%;
   height: 100%;
   border-radius: 23px;
-  padding: 40px 0 0 20px;
+  padding: 40px 0 0 0px;
   transition: all 0.4s;
 }
 .off {
@@ -124,8 +127,8 @@ body {
 }
 .left_container .skills div {
   display: inline-block;
-  color: rgb(155, 155, 155);
-  border: 1px solid rgb(155, 155, 155);
+  color: white;
+  border: 1px solid white;
   padding: 5px 10px;
   font-size: 0.9rem;
   margin: 4px 4px 4px 0;

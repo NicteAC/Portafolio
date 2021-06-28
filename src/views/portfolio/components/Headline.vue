@@ -17,7 +17,7 @@
           <card-2 />
         </v-col>
                 <v-col v-for="n in 1" :key="n" cols="12" sm="4">
-          <card-3 />
+          <card-0 />
         </v-col>
       </v-row>
       <v-row>
@@ -25,21 +25,21 @@
           <card-4 />
         </v-col>
         <v-col v-for="n in 1" :key="n" cols="12" sm="4">
-          <card-5 />
+          <card-6 />
         </v-col>
                 <v-col v-for="n in 1" :key="n" cols="12" sm="4">
-          <card-6 />
+          <card-5 />
         </v-col>
       </v-row>
       <v-row>
         <v-col v-for="n in 1" :key="n" cols="12" sm="4">
-          <card-7 />
+          <card-9 />
         </v-col>
         <v-col v-for="n in 1" :key="n" cols="12" sm="4">
-          <card-8 />
+          <card-7 />
         </v-col>
                 <v-col v-for="n in 1" :key="n" cols="12" sm="4">
-          <card-9 />
+          <card-3 />
         </v-col>
       </v-row>
       <v-row>
@@ -63,6 +63,7 @@
 </template>
 
 <script>
+import Card0 from "../../../components/Cards/Card0.vue";
 import Card1 from "../../../components/Cards/Card1.vue";
 import Card10 from "../../../components/Cards/Card10.vue";
 import Card11 from "../../../components/Cards/Card11.vue";
@@ -78,6 +79,7 @@ import Card9 from "../../../components/Cards/Card9.vue";
 import Card13 from "../../../components/Cards/Card13.vue";
 export default {
   components: {
+    Card0,
     Card1,
     Card2,
     Card3,

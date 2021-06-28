@@ -16,6 +16,7 @@ export default new Vuetify({
             info: '#2196F3',
             success: '#00E676',
             warning: '#FFC107',
+            url: '#FFFFFF'
           },
         },
       },
