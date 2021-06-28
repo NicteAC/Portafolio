@@ -12,8 +12,8 @@
           <div>Css</div>
         </div>
         <div class="icons mt-2">
-          <a href="https://github.com/NicteAC/Meet_Coffee"><span id="icono" class="mdi mdi-github mx-1"></span></a>
-          <a href="https://nicteac.github.io/Meet_Coffee/"><span class="mdi mdi-web-box mx-1"></span></a>          
+          <a href="https://github.com/NicteAC/Meet_Coffee"><span id="icono" class="mdi mdi-github mx-1 url--text"></span></a>
+          <a href="https://nicteac.github.io/Meet_Coffee/"><span class="mdi mdi-web-box mx-1 url--text"></span></a>          
         </div>
         <div @click="clc" class="cancel center">
           <span class="mdi mdi-close"></span>

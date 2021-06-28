@@ -13,8 +13,8 @@
           <div>JavaScript</div>
         </div>
         <div class="icons">
-          <a href="https://github.com/NicteAC/Desafio-Ricomida"><span class="mdi mdi-github mx-1"></span></a>
-          <a href="https://nicteac.github.io/Desafio-Ricomida/"><span class="mdi mdi-web-box mx-1"></span></a>
+          <a href="https://github.com/NicteAC/Desafio-Ricomida"><span class="mdi mdi-github mx-1 url--text"></span></a>
+          <a href="https://nicteac.github.io/Desafio-Ricomida/"><span class="mdi mdi-web-box mx-1 url--text"></span></a>
         </div>
         <div @click="clc" class="cancel center">
           <span class="mdi mdi-close"></span>
