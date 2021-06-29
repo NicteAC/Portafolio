@@ -13,17 +13,17 @@ export default new Router({
       component: () => import('@/views/home/Index.vue'),
     },
     {
-      path: '/about',
+      path: '/aboutme',
       name: 'Sobre mi',
       component: () => import('@/views/about/Index.vue'),
     },
     {
-      path: '/portfolio',
+      path: '/portafolio',
       name: 'Portafolio',
       component: () => import('@/views/portfolio/Index.vue'),
     },
     {
-      path: '/contact',
+      path: '/contacto',
       name: 'Contacto',
       component: () => import('@/views/contact/Index.vue'),
     },

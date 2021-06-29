@@ -21,9 +21,7 @@
         </h1>
 
         <div class="mb-8">
-          Praesent interdum congue mauris, et fringilla lacus pel vitae. Quisque
-          nisl mauris, aliquam eu ultrices vel, conse vitae sapien at imperdiet
-          risus. Quisque cursus risus id. fermentum, in auctor quam consectetur.
+          Hola! si quieres ponerte en contacto conmigo puedes hacerlo por la via que mas te guste o llenar el formulario con tus datos y yo me pondre en contacto contigo.
         </div>
 
         <div class="mb-4"><strong>Email</strong> carola.aliaga@gmail.com</div>
@@ -31,31 +29,29 @@
         <div class="mb-4">
           <strong>LinkedIn</strong> https://www.linkedin.com/in/carola-aliaga/
         </div>
-
-        <div class="mb-4"><strong>Móvil</strong> +56961635279</div>
       </v-col>
 
       <v-col cols="12" md="5">
-        <v-form>
+        <v-form v-model="valid" lazy-validation>
           <v-row class="mb-6">
             <v-col cols="12" md="6">
-              <v-text-field hide-details label="Nombre" solo />
+              <v-text-field v-model="formulario.nombre" hide-details label="Nombre" solo required/>
             </v-col>
 
             <v-col cols="12" md="6">
-              <v-text-field hide-details label="Correo" solo />
+              <v-text-field v-model="formulario.correo" hide-details label="Correo" solo required />
             </v-col>
 
             <v-col cols="12">
-              <v-text-field hide-details label="Asunto" solo />
+              <v-text-field v-model="formulario.asunto" hide-details label="Asunto" solo required/>
             </v-col>
 
             <v-col cols="12">
-              <v-textarea hide-details label="Mensaje" solo />
+              <v-textarea v-model="formulario.mensaje" hide-details label="Mensaje" solo required/>
             </v-col>
           </v-row>
 
-          <v-btn
+          <v-btn @click="addForm(formulario)"
             :block="$vuetify.breakpoint.smAndDown"
             class="primary--text"
             x-large
@@ -70,7 +66,31 @@
 </template>
 
 <script>
+import { mapActions, mapState } from "vuex";
 export default {
   name: "Contact",
+mounted() {
+   
+  },
+   data: () => ({
+    formulario: {
+      nombre: "",
+      correo: "",
+      asunto: "",
+      mensaje: "",
+    },
+  }),
+  computed: {
+    ...mapState(["mensajes"]),
+  },
+  methods: {
+    ...mapActions(["addForm"]),
+    validate() {
+      this.$refs.form.validate();
+    },
+    reset() {
+      this.$refs.form.reset();
+    },
+  },
 };
 </script>
