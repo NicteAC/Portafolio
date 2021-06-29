@@ -21,18 +21,16 @@
         </h1>
 
         <div class="mb-8">
-          Praesent interdum congue mauris, et fringilla lacus pel vitae. Quisque
-          nisl mauris, aliquam eu ultrices vel, conse vitae sapien at imperdiet
-          risus. Quisque cursus risus id. fermentum, in auctor quam consectetur.
+          ¿Te gusto mi trabajo y quieres que realicemos juntos tu proyecto? Acá puedes contactarme!
         </div>
 
-        <div class="mb-4"><strong>Email</strong> carola.aliaga@gmail.com</div>
+        <div class="mb-4"><strong>Email</strong> <a href="mailto:carola.aliaga@gmail.com">carola.aliaga@gmail.com</a></div>
 
         <div class="mb-4">
-          <strong>LinkedIn</strong> https://www.linkedin.com/in/carola-aliaga/
+          <strong>LinkedIn</strong> <a href="https://www.linkedin.com/in/carola-aliaga/">https://www.linkedin.com/in/carola-aliaga/</a>
         </div>
 
-        <div class="mb-4"><strong>Móvil</strong> +56961635279</div>
+        <div class="mb-4"><strong>Github</strong> <a href="https://github.com/NicteAC">https://github.com/NicteAC</a></div>
       </v-col>
 
       <v-col cols="12" md="5">

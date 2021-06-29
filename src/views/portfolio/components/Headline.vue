@@ -3,10 +3,7 @@
     <h1 class="display-2 font-weight-light mb-8">Mi Portafolio</h1>
 
     <v-responsive class="mx-auto subtitle-1 grey--text" max-width="550">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
-      numquam voluptates dolorem? Et dolore tenetur est magni illo ex aspernatur
-      beatae eligendi enim accusamus? In tempore dignissimos eos aperiam
-      aliquam.
+      Acá Puedes ver los proyectos que he realizado utilizando: Html, Css, Sass, Bootstrap, Javascript, Vue.js, Vuetify, Nuxt y mas!
     </v-responsive>
     <v-container>
       <v-row>
