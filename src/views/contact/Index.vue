@@ -34,26 +34,26 @@
       </v-col>
 
       <v-col cols="12" md="5">
-        <v-form>
+        <v-form v-model="valid" lazy-validation>
           <v-row class="mb-6">
             <v-col cols="12" md="6">
-              <v-text-field hide-details label="Nombre" solo />
+              <v-text-field v-model="formulario.nombre" hide-details label="Nombre" solo required/>
             </v-col>
 
             <v-col cols="12" md="6">
-              <v-text-field hide-details label="Correo" solo />
+              <v-text-field v-model="formulario.correo" hide-details label="Correo" solo required />
             </v-col>
 
             <v-col cols="12">
-              <v-text-field hide-details label="Asunto" solo />
+              <v-text-field v-model="formulario.asunto" hide-details label="Asunto" solo required/>
             </v-col>
 
             <v-col cols="12">
-              <v-textarea hide-details label="Mensaje" solo />
+              <v-textarea v-model="formulario.mensaje" hide-details label="Mensaje" solo required/>
             </v-col>
           </v-row>
 
-          <v-btn
+          <v-btn @click="addForm(formulario)"
             :block="$vuetify.breakpoint.smAndDown"
             class="primary--text"
             x-large
@@ -68,7 +68,31 @@
 </template>
 
 <script>
+import { mapActions, mapState } from "vuex";
 export default {
   name: "Contact",
+mounted() {
+   
+  },
+   data: () => ({
+    formulario: {
+      nombre: "",
+      correo: "",
+      asunto: "",
+      mensaje: "",
+    },
+  }),
+  computed: {
+    ...mapState(["mensajes"]),
+  },
+  methods: {
+    ...mapActions(["addForm"]),
+    validate() {
+      this.$refs.form.validate();
+    },
+    reset() {
+      this.$refs.form.reset();
+    },
+  },
 };
 </script>
