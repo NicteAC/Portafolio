@@ -15,27 +15,27 @@
     /> -->
 
     <v-row class="mt-10" justify="center">
-      <v-col cols="12" md="4">
-        <h1 class="display-1 mb-8 font-weight-bold">
+      <v-col cols="12" md="6">
+        <h1 class="display-1 mb-8 pa-2 font-weight-bold">
           Informacion de Contacto:
         </h1>
 
-        <div class="mb-8">
+        <div class="mb-8 pa-2">
           ¿Te gusto mi trabajo y quieres que realicemos juntos tu proyecto? Acá puedes contactarme!
         </div>
 
-        <div class="mb-4"><strong>Email</strong> <a href="mailto:carola.aliaga@gmail.com">carola.aliaga@gmail.com</a></div>
+        <div class="mb-4 pa-2"><strong>Email</strong> <a href="mailto:carola.aliaga@gmail.com">carola.aliaga@gmail.com</a></div>
 
-        <div class="mb-4">
+        <div class="mb-4 pa-2">
           <strong>LinkedIn</strong> <a href="https://www.linkedin.com/in/carola-aliaga/">https://www.linkedin.com/in/carola-aliaga/</a>
         </div>
 
-        <div class="mb-4"><strong>Github</strong> <a href="https://github.com/NicteAC">https://github.com/NicteAC</a></div>
+        <div class="mb-4 pa-2"><strong>Github</strong> <a href="https://github.com/NicteAC">https://github.com/NicteAC</a></div>
       </v-col>
 
-      <v-col cols="12" md="5">
+      <v-col cols="12" md="6">
         <v-form v-model="valid" lazy-validation>
-          <v-row class="mb-6">
+          <v-row class="mb-6 pa-2">
             <v-col cols="12" md="6">
               <v-text-field v-model="formulario.nombre" hide-details label="Nombre" solo required/>
             </v-col>
@@ -52,10 +52,10 @@
               <v-textarea v-model="formulario.mensaje" hide-details label="Mensaje" solo required/>
             </v-col>
           </v-row>
-
+  
           <v-btn @click="addForm(formulario)"
             :block="$vuetify.breakpoint.smAndDown"
-            class="primary--text"
+            class="primary--text ma-2"
             x-large
             elevation="3"
           >

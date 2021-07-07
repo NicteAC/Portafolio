@@ -10,7 +10,7 @@
         cols="12"
         md="6"
       >
-        <v-responsive class="mx-auto px-3 px-md-12" max-width="700">
+        <v-responsive class="mx-auto">
           <h1
             class="mb-6"
             :class="$vuetify.breakpoint.md ? 'display-2' : 'display-1'"
@@ -30,7 +30,7 @@
           </p>
           <p>
             ¿Donde nace Nicte? muchos me preguntan que significa nicte. Para quienes no saben Nicte viene de NYX (NO, NO ES LA MARCA DE MAQUILLAJE), que es la diosa griega de la noche y una hija de Caos. Como siempre estuve en constante movimiento y soy mas nocturna me senti identificada y use este nombre para mis diseños de vestuario. Como es un nombre que he usado por ya varios años lo converti en parte de mi marca personal.
-          </p>
+          </p><br>
           <h3>Te invito a ver mi portafolio!</h3><br>
 
           <div class="signature">Nicte</div>
@@ -51,4 +51,7 @@ export default {
   font-family: 'Sacramento', cursive !important
   font-size: 2.5rem
   font-style: italic
+p 
+  text-align: justify
+
 </style>

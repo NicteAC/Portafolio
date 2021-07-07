@@ -11,6 +11,7 @@
 </template>
 
 <script>
+import firebase from "firebase";
 export default {
   components: {
     CoreDrawer: () => import("@/components/Drawer"),

@@ -2,11 +2,14 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import firebase from "firebase";
 import pathify from 'vuex-pathify'
+import VueRouter from 'vue-router'
+import  createPersistedState  from  'vuex-persistedstate'
 
 Vue.use(Vuex)
-
+Vue.use(VueRouter)
 export default new Vuex.Store({
    state: {
+     mensajes:[],
     drawer: false,
     links: [
       'Inicio',
@@ -19,6 +22,9 @@ export default new Vuex.Store({
     SET_DRAWER (state, payload) {
       state.drawer = payload
     },
+    GET_MESSAGE(state, payload) {
+      state.Mensajes = payload;
+    },
   },
   actions: {
     //agregar mensajes
@@ -30,7 +36,29 @@ export default new Vuex.Store({
           .collection("mensajes")
           .add(formulario);
       }
-    }  
+    },
+    //login admin
+    
+    //logout admin
+
+    //obtener mensajes
+    get_Message({ commit }) {
+      firebase
+        .firestore()
+        .collection("mensajes")
+        .onSnapshot((docs) => {
+          const mensajes = [];
+          docs.forEach((doc) => {
+            mensajes.push({
+              id: doc.id,
+              data: doc.data(),
+            });
+          });
+          commit("GET_MESSAGE", mensajes);
+        });
+    },
+   
   },
   plugins: [pathify.plugin],
+  plugins: [createPersistedState()]
 })
