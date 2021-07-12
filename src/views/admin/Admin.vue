@@ -21,7 +21,7 @@
     </tbody>
    </template>
   </v-simple-table>
-    <v-btn @click="logout" class="primary--text ma-2" elevation="3" x-large
+    <v-btn @click="salir" class="primary--text ma-2" elevation="3" x-large
       >salir
     </v-btn>
   </div>
@@ -49,15 +49,18 @@ export default {
     ...mapState(["mensajes"]),
   },
   methods: {
-    ...mapActions(["get_Message"]),
-    logout() {
-      firebase
-        .auth()
-        .signOut()
-        .then(() => {
-          this.$router.push("login");
-        });
-    },
+    ...mapActions(["get_Message", "logout"]),
+    salir() {
+      this.logout()
+    }
+    // logout() {
+    //   firebase
+    //     .auth()
+    //     .signOut()
+    //     .then(() => {
+    //       router.push("login");
+    //     });
+    //},
   },
 };
 </script>

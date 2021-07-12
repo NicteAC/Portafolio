@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Router from 'vue-router'
 import firebase from 'firebase'
+import store from "../store"
 
 Vue.use(Router)
 
@@ -49,17 +50,17 @@ const router = new VueRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  const user = firebase.auth().currentUser;
-  const auth = to.meta.auth;
-  if (auth && user) {
-    next();
-  } else if (auth && !user) {
-    alert("Usted no tiene permisos para entrar aquí");
-    next("/");
+  let user = store.state.user.uid; // firebase.auth().currentUser;
+  let authRequired = to.matched.some(route => route.meta.login);
+  if (!user && authRequired) {
+  next('login');
+  } else if (user && !authRequired) {
+  next('home');
   } else {
-    next();
+  next();
   }
-});
+  });
+  
 
 export default router
 

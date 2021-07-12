@@ -4,11 +4,12 @@ import firebase from "firebase";
 import pathify from 'vuex-pathify'
 import VueRouter from 'vue-router'
 import  createPersistedState  from  'vuex-persistedstate'
-
+import router from "@/router"
 Vue.use(Vuex)
 Vue.use(VueRouter)
 export default new Vuex.Store({
    state: {
+     user:[],
      mensajes:[],
     drawer: false,
     links: [
@@ -16,6 +17,9 @@ export default new Vuex.Store({
       'Sobre mi',
       'Portafolio',
       'Contacto',
+      'login',
+      'admin'
+
     ],
   },
   mutations: {
@@ -25,6 +29,11 @@ export default new Vuex.Store({
     GET_MESSAGE(state, payload) {
       state.Mensajes = payload;
     },
+
+    USER(state, payload) {
+      state.user = payload;
+    },
+
   },
   actions: {
     //agregar mensajes
@@ -38,9 +47,26 @@ export default new Vuex.Store({
       }
     },
     //login admin
-    
+    login({ commit }, payload){
+      const { email, password } = payload;
+      firebase
+      .auth()
+      .signInWithEmailAndPassword(email, password)
+      .then(({ user }) => {
+        
+        commit("USER",user)
+        localStorage.setItem(
+         "token",user.uid)
+        router.push("/admin");
+      });
+      
+    },
     //logout admin
-
+    logout({ commit }){
+      commit("USER", '')
+      localStorage.clear();
+      router.push("/login");
+    },
     //obtener mensajes
     get_Message({ commit }) {
       firebase

@@ -21,7 +21,7 @@
               </v-col>
             </v-row>
             <v-btn
-              @click="login"
+              @click="logueo"
               class="primary--text ma-2"
               elevation="3"
               x-large
@@ -35,7 +35,9 @@
 </template>
 
 <script>
-import firebase from "firebase";
+//import firebase from "firebase";
+import { mapActions } from 'vuex';
+
 export default {
   name: "Login",
    data() {
@@ -47,15 +49,11 @@ export default {
     };
   },
   methods:{
-    login(){
-      const { email, password } = this.user;
-      firebase
-      .auth()
-      .signInWithEmailAndPassword(email, password)
-      .then(({ user }) => {
-        this.$router.push("admin");
-      });
-    }
+   ...mapActions(['login']),
+   logueo(){
+    // console.log("entro a ña funcion..",this.user)
+     this.login(this.user)
+   }
   }
 };
 </script>
