@@ -1,5 +1,6 @@
 # portafolio
 Proyecto portafolio personal
+https://nicte.netlify.app/
 
 ## Project setup
 ```
